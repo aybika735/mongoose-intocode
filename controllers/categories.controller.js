@@ -1,12 +1,10 @@
 const Category = require("../models/Category.model");
 
-
-
 module.exports.categoriescontroller = {
   createCategory: async function (req, res) {
     try {
       await Category.create({
-        name: req.body.name, 
+        name: req.body.name,
       });
       res.json("Категория добавлена");
     } catch (error) {
@@ -25,7 +23,7 @@ module.exports.categoriescontroller = {
   changeCategoryById: async function (req, res) {
     try {
       const category = await Category.findByIdAndUpdate(req.params.id, {
-        name: req.body.name, 
+        name: req.body.name,
       });
       res.json("Категория изменена");
     } catch (error) {
@@ -41,6 +39,4 @@ module.exports.categoriescontroller = {
       console.log(error.toString());
     }
   },
- 
- 
 };

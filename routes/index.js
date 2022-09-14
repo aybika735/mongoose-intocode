@@ -6,5 +6,4 @@ router.use(require("./groups.route"));
 router.use(require("./notes.route"));
 router.use(require("./users.route"));
 
-
 module.exports = router;

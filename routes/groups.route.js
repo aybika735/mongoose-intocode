@@ -1,7 +1,5 @@
 const { Router } = require("express");
-const {
-  groupscontroller,
-} = require("../controllers/groups.controller");
+const { groupscontroller } = require("../controllers/groups.controller");
 const router = Router();
 
 router.post("/groups", groupscontroller.createGroup);
@@ -14,5 +12,5 @@ router.patch("/groups/add/:id", groupscontroller.addUsersToGroup);
 router.patch("/groups/delete/:id", groupscontroller.deleteUsersToGroup);
 router.get("/groups/week", groupscontroller.getGroupsByWeek);
 router.get("/groups/finish", groupscontroller.getGroupsFinish);
-router.get("/groups/:idGroup/:idCategory", groupscontroller.getPersent);
+router.get("/groups/:id/:idCategory", groupscontroller.getPersent);
 module.exports = router;

@@ -6,8 +6,6 @@ const noteSchema = mongoose.Schema({
     type: mongoose.SchemaTypes.ObjectId,
     ref: "User",
   },
-
-  
 });
 
 const Note = mongoose.model("Note", noteSchema);
